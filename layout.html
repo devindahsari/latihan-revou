@@ -2,22 +2,124 @@
 <html>
     <head>
         <title>Latihan Layout</title>
+        <style>
+            .container {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .container > div {
+                padding: 10px;
+                text-align: center;
+                font-size: 14sp;
+                color: #ffeead;
+                border: 2px solid;
+                background-color: green;
+            }
+            .content{
+                flex-direction: row;
+                display: flex;
+            }
+            .content > div {
+                display: flex;
+                flex: 1;
+                align-content: center;
+                justify-content: center;
+            }
+            .table_person {
+                border: 2px ridge;
+            }
+            .table_person > th {
+                background-color: gray;
+            }
+            
+            footer > p {
+                text-align: end;
+                justify-content: flex-end;
+            }
+        </style>
     </head>
     <body>
-        <article>
-            <header>
-                <h1>Judul Artikel</h1>
-                <p>Selamat datang!</p>
-            </header>
-            <main>
-                <p>Ini konten utama, Ini konten utama, Ini konten utama, Ini konten utama</p>
-                <p>Ini konten kedua</p>
-            </main>
-            <footer>
-                <p>Finish</p>
-            </footer>
-        </article>
-        
+        <nav class="container">
+            <div class="home">Home</div>
+            <div class="myprofile">My Profile</div>
+            <div class="portofolio">Portofolio</div>
+            <div class="messageus">Message Us</div>
+        </nav>
+        <header>
+            <h1>Form Belajar</h1>
+            <p>Ini adalah website latihan pertama</p>
+        </header>
+        <main class="content">
+            <div>
+                <form action="#" method="post">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama">
+                    <br>
 
+                    <label for="tanggal">Tanggal Lahir</label>
+                    <input type="date" id="tanggal">
+                    <br>
+
+                    <label for="jk">Jenis Kelamin</label>
+                    <input type="radio" id="jk" value="L">Laki-Laki
+                    <input type="radio" id="jk" value="P">Perempuan
+                    <br>
+
+                    <label for="pesan">pesan</label>
+                    <textarea cols="40" rows="10" id="pesan"></textarea>
+                    <br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            
+            <div>
+                <table class="table_person">
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pesan</th>
+                        <th>Profile</th>
+                        <th>Hapus</th>
+                    </tr>
+                    <tr>
+                        <td>Ada Lovelace</td>
+                        <td>December 10, 1815</td>
+                        <td>Perempuan</td>
+                        <td>Belajar Buat Website</td>
+                        <td><a href="#">Klik Disini</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Grace Hopper</td>
+                        <td>December 9, 1906</td>
+                        <td>Perempuan</td>
+                        <td>Hello World</td>
+                        <td><a href="#">Klik Disini</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Margaret Hamilton</td>
+                        <td>August 17, 1936</td>
+                        <td>Perempuan</td>
+                        <td>Test Dulu</td>
+                        <td><a href="#">Klik Disini</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Joan Charlie</td>
+                        <td>June 24, 1917</td>
+                        <td>Laki-Laki</td>
+                        <td>Selalu Semangat</td>
+                        <td><a href="#">Klik Disini</a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <p>Created By RevoU</p>
+        </footer>
     </body>
 </html>
